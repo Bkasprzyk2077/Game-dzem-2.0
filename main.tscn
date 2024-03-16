@@ -1,9 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://c1iy20rnn1nvs"]
+[gd_scene load_steps=10 format=3 uid="uid://c1iy20rnn1nvs"]
 
 [ext_resource type="PackedScene" uid="uid://dtp10shdne2l2" path="res://Scenes/Player/player.tscn" id="1_6ncrx"]
 [ext_resource type="Texture2D" uid="uid://c8byt444v1dqm" path="res://Images/Terrain (32x32).png" id="1_cd4mq"]
 [ext_resource type="Script" path="res://main.gd" id="1_osnqo"]
-[ext_resource type="Texture2D" uid="uid://ceylmf7myh7jl" path="res://Images/icon.svg" id="2_wvfd2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_eio4m"]
 texture = ExtResource("1_cd4mq")
@@ -1211,9 +1210,9 @@ script = ExtResource("1_osnqo")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 
-[node name="Background" type="Sprite2D" parent="."]
+[node name="Background" type="ParallaxBackground" parent="."]
 scale = Vector2(3, 3)
-texture = ExtResource("2_wvfd2")
+transform = Transform2D(3, 0, 0, 3, 0, 0)
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_vrk6x")
@@ -1224,6 +1223,7 @@ format = 2
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
