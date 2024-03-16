@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dlbf7o41tucyn"]
+[gd_scene load_steps=10 format=3 uid="uid://dlbf7o41tucyn"]
 
 [ext_resource type="PackedScene" uid="uid://c1iy20rnn1nvs" path="res://main.tscn" id="1_oh5gk"]
 [ext_resource type="PackedScene" uid="uid://cecb21a5reyn4" path="res://Scenes/LevelExit/LevelExit.tscn" id="2_kmyk6"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://c0vl0nk1sf70n" path="res://Scenes/Platforms/Elevator/Elevator.tscn" id="6_6gcbu"]
 [ext_resource type="PackedScene" uid="uid://cm867fbdng67m" path="res://Scenes/Box/Box.tscn" id="7_bt3pl"]
 [ext_resource type="PackedScene" uid="uid://qnp6c5yg5i12" path="res://Scenes/Note/Note.tscn" id="7_jsorv"]
+[ext_resource type="PackedScene" uid="uid://cl41igdtn74v2" path="res://Scenes/Player/player_stage_1.tscn" id="9_k6vy8"]
 
 [node name="level_test" instance=ExtResource("1_oh5gk")]
 
@@ -21,34 +22,33 @@ position = Vector2(-394, 42)
 [node name="TileMap" parent="." index="3"]
 layer_0/tile_data = PackedInt32Array(458737, 196608, 10, 458738, 262144, 10, 458739, 327680, 10, 458740, 393216, 10, 458741, 196608, 10, 458742, 262144, 10, 458743, 327680, 10, 458744, 393216, 10, 458745, 196608, 10, 458746, 262144, 10, 458747, 327680, 10, 458748, 393216, 10, 458749, 196608, 10, 458750, 262144, 10, 458751, 327680, 10, 393216, 393216, 10, 393217, 196608, 10, 393218, 262144, 10, 393219, 327680, 10, 393220, 393216, 10, 393221, 196608, 10, 393222, 262144, 10, 393223, 327680, 10, 393224, 393216, 10, 393225, 196608, 10, 393226, 262144, 10, 393227, 327680, 10, 393228, 393216, 10, 393229, 196608, 10, 393230, 262144, 10, 393231, 327680, 10, 393232, 393216, 10, 393233, 196608, 10, 393234, 262144, 10, 393235, 327680, 10, 393236, 393216, 10, 393237, 196608, 10, 393238, 262144, 10, 393239, 327680, 10, 393240, 393216, 10, 393241, 196608, 10, 393242, 262144, 10, 393243, 327680, 10, 393244, 393216, 10, 393245, 262144, 10, 458732, 393216, 10, 458733, 196608, 10, 458734, 262144, 10, 458735, 327680, 10, 458736, 393216, 10, 458729, 327680, 10, 458730, 393216, 10, 458731, 327680, 10, 458727, 196608, 10, 458728, 262144, 10)
 
-[node name="Player" parent="." index="4"]
-position = Vector2(18, 60)
-
-[node name="Doors" parent="." index="6" node_paths=PackedStringArray("key") instance=ExtResource("3_asopo")]
+[node name="Doors" parent="." index="5" node_paths=PackedStringArray("key") instance=ExtResource("3_asopo")]
 position = Vector2(-230, 33)
 key = NodePath("../Button")
 
 [node name="End" parent="Doors" index="2"]
 position = Vector2(0, 180)
 
-[node name="Button" parent="." index="7" instance=ExtResource("4_kdn7o")]
+[node name="Button" parent="." index="6" instance=ExtResource("4_kdn7o")]
 position = Vector2(-106, 81)
 
-[node name="ClickButton" parent="." index="8" instance=ExtResource("5_kbyc0")]
+[node name="ClickButton" parent="." index="7" instance=ExtResource("5_kbyc0")]
 position = Vector2(277, 61)
 
-[node name="Elevator" parent="." index="9" node_paths=PackedStringArray("key") instance=ExtResource("6_6gcbu")]
+[node name="Elevator" parent="." index="8" node_paths=PackedStringArray("key") instance=ExtResource("6_6gcbu")]
 position = Vector2(372, 79)
 key = NodePath("../ClickButton")
 
 [node name="End" parent="Elevator" index="2"]
 position = Vector2(239, -219)
 
-[node name="Note" parent="." index="10" instance=ExtResource("7_jsorv")]
+[node name="Note" parent="." index="9" instance=ExtResource("7_jsorv")]
 position = Vector2(62, 77)
 
-[node name="Box" parent="." index="11" instance=ExtResource("7_bt3pl")]
+[node name="Box" parent="." index="10" instance=ExtResource("7_bt3pl")]
 position = Vector2(145, 79)
+
+[node name="Player_stage_1" parent="." index="11" instance=ExtResource("9_k6vy8")]
 
 [editable path="Doors"]
 [editable path="Elevator"]
