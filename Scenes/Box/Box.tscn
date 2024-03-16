@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://cm867fbdng67m"]
+
+[ext_resource type="Texture2D" uid="uid://ceylmf7myh7jl" path="res://Images/icon.svg" id="1_jjryi"]
+[ext_resource type="Script" path="res://Scenes/Box/Box.gd" id="1_lnjeq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6w1a3"]
+size = Vector2(30, 30)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ilwtd"]
+radius = 34.3
+
+[node name="Box" type="RigidBody2D" groups=["box"]]
+mass = 0.3
+gravity_scale = 0.3
+script = ExtResource("1_lnjeq")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1.90735e-06, -1.90735e-06)
+scale = Vector2(0.234375, 0.234375)
+texture = ExtResource("1_jjryi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_6w1a3")
+
+[node name="InteractArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractArea"]
+shape = SubResource("CircleShape2D_ilwtd")

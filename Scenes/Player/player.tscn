@@ -218,3 +218,6 @@ position_smoothing_enabled = true
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
 texture = ExtResource("4_nshj2")
+
+[node name="ObjectSocket" type="Marker2D" parent="."]
+position = Vector2(-1, -37)
