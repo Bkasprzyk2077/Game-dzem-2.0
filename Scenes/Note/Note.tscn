@@ -1,0 +1,46 @@
+[gd_scene load_steps=4 format=3 uid="uid://qnp6c5yg5i12"]
+
+[ext_resource type="Texture2D" uid="uid://ceylmf7myh7jl" path="res://Images/icon.svg" id="1_jfrt3"]
+[ext_resource type="Script" path="res://Scenes/Note/Note.gd" id="1_m5o72"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eucif"]
+size = Vector2(30, 30)
+
+[node name="Note" type="Node2D"]
+script = ExtResource("1_m5o72")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1.90735e-06, 1.90735e-06)
+scale = Vector2(0.234375, 0.234375)
+texture = ExtResource("1_jfrt3")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_eucif")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+custom_minimum_size = Vector2(500, 500)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+texture = ExtResource("1_jfrt3")
+
+[node name="Label" type="Label" parent="CanvasLayer/TextureRect"]
+layout_mode = 0
+offset_right = 495.0
+offset_bottom = 503.0
+theme_override_font_sizes/font_size = 32
+text = "Lorem ipsum sin doront"
+autowrap_mode = 2

@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://c1iy20rnn1nvs"]
+[gd_scene load_steps=8 format=3 uid="uid://c1iy20rnn1nvs"]
 
 [ext_resource type="PackedScene" uid="uid://dtp10shdne2l2" path="res://Scenes/Player/player.tscn" id="1_6ncrx"]
 [ext_resource type="Texture2D" uid="uid://c8byt444v1dqm" path="res://Images/Terrain (32x32).png" id="1_cd4mq"]
 [ext_resource type="Texture2D" uid="uid://ceylmf7myh7jl" path="res://Images/icon.svg" id="2_wvfd2"]
+[ext_resource type="PackedScene" uid="uid://qnp6c5yg5i12" path="res://Scenes/Note/Note.tscn" id="4_0kw4u"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_eio4m"]
 texture = ExtResource("1_cd4mq")
@@ -1178,3 +1179,6 @@ texture = ExtResource("2_wvfd2")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 enabled = false
+
+[node name="Note" parent="." instance=ExtResource("4_0kw4u")]
+position = Vector2(-158, 136)
