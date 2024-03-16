@@ -3,7 +3,7 @@ extends Node2D
 @onready var canvas_layer = $CanvasLayer
 @onready var area_2d = $Area2D
 @onready var label = $CanvasLayer/TextureRect/Label
-@onready var texture_rect = $CanvasLayer/TextureRect
+@onready var texture_rect = $TextureRect
 
 func _process(delta):
 	if area_2d.overlaps_body(get_tree().get_first_node_in_group("player")):

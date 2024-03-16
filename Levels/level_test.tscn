@@ -16,7 +16,6 @@
 [node name="level_test" instance=ExtResource("1_oh5gk")]
 
 [node name="CanvasModulate" parent="." index="0"]
-visible = false
 color = Color(0, 0, 0, 1)
 
 [node name="Background" parent="." index="1"]
@@ -75,6 +74,7 @@ position = Vector2(62, 77)
 position = Vector2(145, 79)
 
 [node name="Player_stage_1" parent="." index="11" instance=ExtResource("9_k6vy8")]
+position = Vector2(31, -54)
 
 [editable path="Doors"]
 [editable path="Elevator"]

@@ -29,6 +29,7 @@ shape = SubResource("RectangleShape2D_6w1a3")
 shape = SubResource("CircleShape2D_ilwtd")
 
 [node name="TextureRect" type="TextureRect" parent="."]
+visible = false
 light_mask = 0
 texture_filter = 1
 offset_left = -40.0
