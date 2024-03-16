@@ -12,6 +12,8 @@ extends CharacterBody2D
 @onready var jump_gravity : float = ((-2.0 * jump_height) / (jump_time_to_peak * jump_time_to_peak)) * -1.0
 @onready var fall_gravity : float = ((-2.0 * jump_height) / (jump_time_to_descent * jump_time_to_descent)) * -1.0
 
+var facing_right = true
+
 func _physics_process(delta):
 	velocity.y += get_gravity() * delta
 	velocity.x = move_toward(velocity.x, get_input_velocity() * move_speed, 25)
@@ -39,10 +41,11 @@ func get_input_velocity() -> float:
 	return horizontal
 	
 func animation():
-	if velocity.x >= 0:
-		sprite.flip_h = false
-	else:
-		sprite.flip_h = true
+	if velocity.x > 0:
+		facing_right = true
+	elif velocity.x < 0:
+		facing_right = false
+	sprite.flip_h = !facing_right
 	if velocity == Vector2.ZERO:
 		sprite.play("Idle")
 	else:
