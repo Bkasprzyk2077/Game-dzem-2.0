@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://dlbf7o41tucyn"]
+[gd_scene load_steps=6 format=3 uid="uid://dlbf7o41tucyn"]
 
 [ext_resource type="PackedScene" uid="uid://c1iy20rnn1nvs" path="res://main.tscn" id="1_oh5gk"]
 [ext_resource type="PackedScene" uid="uid://cecb21a5reyn4" path="res://Scenes/LevelExit/LevelExit.tscn" id="2_kmyk6"]
 [ext_resource type="PackedScene" uid="uid://d02divua3fcjo" path="res://Scenes/Doors/Doors.tscn" id="3_asopo"]
 [ext_resource type="PackedScene" uid="uid://hbdun73us2t7" path="res://Scenes/Button/Button.tscn" id="4_kdn7o"]
+[ext_resource type="PackedScene" uid="uid://ma0pmmb7dsdj" path="res://Scenes/ClickButton/ClickButton.tscn" id="5_kbyc0"]
 
 [node name="level_test" instance=ExtResource("1_oh5gk")]
 
@@ -25,7 +26,10 @@ visible = false
 
 [node name="Doors" parent="." index="6" node_paths=PackedStringArray("key") instance=ExtResource("3_asopo")]
 position = Vector2(-230, 33)
-key = NodePath("../Button")
+key = NodePath("../ClickButton")
 
 [node name="Button" parent="." index="7" instance=ExtResource("4_kdn7o")]
 position = Vector2(72, 91)
+
+[node name="ClickButton" parent="." index="8" instance=ExtResource("5_kbyc0")]
+position = Vector2(-101, 63)

@@ -1,3 +1,25 @@
-[gd_scene format=3 uid="uid://ma0pmmb7dsdj"]
+[gd_scene load_steps=5 format=3 uid="uid://ma0pmmb7dsdj"]
+
+[ext_resource type="Script" path="res://Scenes/ClickButton/ClickButton.gd" id="1_0okml"]
+[ext_resource type="Texture2D" uid="uid://ceylmf7myh7jl" path="res://Images/icon.svg" id="1_2046k"]
+[ext_resource type="Texture2D" uid="uid://csiwisyiecgk6" path="res://Images/light.png" id="2_ysbw0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j2vse"]
+size = Vector2(64, 64)
 
 [node name="ClickButton" type="Node2D"]
+script = ExtResource("1_0okml")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_2046k")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+color = Color(0, 1, 0, 0.847059)
+texture = ExtResource("2_ysbw0")
+texture_scale = 0.5
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_j2vse")
