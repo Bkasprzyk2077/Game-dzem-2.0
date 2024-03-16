@@ -1,16 +1,31 @@
-[gd_scene load_steps=3 format=3 uid="uid://dlbf7o41tucyn"]
+[gd_scene load_steps=5 format=3 uid="uid://dlbf7o41tucyn"]
 
 [ext_resource type="PackedScene" uid="uid://c1iy20rnn1nvs" path="res://main.tscn" id="1_oh5gk"]
 [ext_resource type="PackedScene" uid="uid://cecb21a5reyn4" path="res://Scenes/LevelExit/LevelExit.tscn" id="2_kmyk6"]
+[ext_resource type="PackedScene" uid="uid://d02divua3fcjo" path="res://Scenes/Doors/Doors.tscn" id="3_asopo"]
+[ext_resource type="PackedScene" uid="uid://hbdun73us2t7" path="res://Scenes/Button/Button.tscn" id="4_kdn7o"]
 
 [node name="level_test" instance=ExtResource("1_oh5gk")]
 
-[node name="CanvasModulate" parent="." index="1"]
+[node name="CanvasModulate" parent="." index="0"]
 visible = false
 color = Color(0, 0, 0, 1)
 
 [node name="LevelExit" parent="." index="2" instance=ExtResource("2_kmyk6")]
-position = Vector2(238, 34)
+position = Vector2(395, 34)
 
 [node name="TileMap" parent="." index="3"]
 layer_0/tile_data = PackedInt32Array(458737, 196608, 10, 458738, 262144, 10, 458739, 327680, 10, 458740, 393216, 10, 458741, 196608, 10, 458742, 262144, 10, 458743, 327680, 10, 458744, 393216, 10, 458745, 196608, 10, 458746, 262144, 10, 458747, 327680, 10, 458748, 393216, 10, 458749, 196608, 10, 458750, 262144, 10, 458751, 327680, 10, 393216, 393216, 10, 393217, 196608, 10, 393218, 262144, 10, 393219, 327680, 10, 393220, 393216, 10, 393221, 196608, 10, 393222, 262144, 10, 393223, 327680, 10, 393224, 393216, 10, 393225, 196608, 10, 393226, 262144, 10, 393227, 327680, 10, 393228, 393216, 10, 393229, 196608, 10, 393230, 262144, 10, 393231, 327680, 10, 393232, 393216, 10)
+
+[node name="Player" parent="." index="4"]
+position = Vector2(-87, -168)
+
+[node name="ColorRect" parent="CanvasLayer" index="0"]
+visible = false
+
+[node name="Doors" parent="." index="6" node_paths=PackedStringArray("key") instance=ExtResource("3_asopo")]
+position = Vector2(-230, 33)
+key = NodePath("../Button")
+
+[node name="Button" parent="." index="7" instance=ExtResource("4_kdn7o")]
+position = Vector2(72, 91)
