@@ -7,6 +7,7 @@ func _ready():
 	animation_player.play("in")
 
 func change_level(next_level):
+	print(next_level)
 	animation_player.play("out")
 	await animation_player.animation_finished
 	get_tree().change_scene_to_file(next_level)
