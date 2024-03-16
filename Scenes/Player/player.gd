@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+@onready var sprite = $Sprite
+
 @export var move_speed = 400.0
 
 @export var jump_height : float
@@ -18,6 +20,7 @@ func _physics_process(delta):
 		jump()
 	
 	move_and_slide()
+	animation()
 
 func get_gravity() -> float:
 	return jump_gravity if velocity.y < 0.0 else fall_gravity
@@ -34,3 +37,13 @@ func get_input_velocity() -> float:
 		horizontal += 1.0
 	
 	return horizontal
+	
+func animation():
+	if velocity.x > 0:
+		sprite.flip_h = false
+	else:
+		sprite.flip_h = true
+	if velocity == Vector2.ZERO:
+		sprite.play("Idle")
+	else:
+		sprite.play("Run")

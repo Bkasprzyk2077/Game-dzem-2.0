@@ -1177,3 +1177,4 @@ scale = Vector2(7.82812, 0.171875)
 texture = ExtResource("2_wvfd2")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+enabled = false
