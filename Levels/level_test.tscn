@@ -1,8 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://dlbf7o41tucyn"]
+[gd_scene load_steps=13 format=3 uid="uid://dlbf7o41tucyn"]
 
 [ext_resource type="PackedScene" uid="uid://c1iy20rnn1nvs" path="res://main.tscn" id="1_oh5gk"]
 [ext_resource type="PackedScene" uid="uid://cecb21a5reyn4" path="res://Scenes/LevelExit/LevelExit.tscn" id="2_kmyk6"]
+[ext_resource type="Texture2D" uid="uid://bbfo4gkkln41d" path="res://Images/Bg1/IMG_7479.png" id="2_sv1cd"]
 [ext_resource type="PackedScene" uid="uid://d02divua3fcjo" path="res://Scenes/Doors/Doors.tscn" id="3_asopo"]
+[ext_resource type="Texture2D" uid="uid://bo8hmkipxvsvu" path="res://Images/Bg1/IMG_7481.png" id="3_qkbfy"]
+[ext_resource type="Texture2D" uid="uid://dw4jung5t3ppq" path="res://Images/Bg1/IMG_7482.png" id="4_60id3"]
 [ext_resource type="PackedScene" uid="uid://hbdun73us2t7" path="res://Scenes/Button/Button.tscn" id="4_kdn7o"]
 [ext_resource type="PackedScene" uid="uid://ma0pmmb7dsdj" path="res://Scenes/ClickButton/ClickButton.tscn" id="5_kbyc0"]
 [ext_resource type="PackedScene" uid="uid://c0vl0nk1sf70n" path="res://Scenes/Platforms/Elevator/Elevator.tscn" id="6_6gcbu"]
@@ -17,24 +20,27 @@ visible = false
 color = Color(0, 0, 0, 1)
 
 [node name="Background" parent="." index="1"]
-offset = Vector2(2.08165e-12, 600)
-scale = Vector2(0.3, 0.3)
-transform = Transform2D(0.3, 0, 0, 0.3, 2.08165e-12, 600)
+offset = Vector2(1056, 600)
+scale = Vector2(0.5, 0.5)
+transform = Transform2D(0.5, 0, 0, 0.5, 1056, 600)
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="Background" index="0"]
 motion_scale = Vector2(0.05, 2.08165e-12)
 
 [node name="Sprite2D" type="Sprite2D" parent="Background/ParallaxLayer" index="0"]
+texture = ExtResource("2_sv1cd")
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="Background" index="1"]
 motion_scale = Vector2(0.1, 2.08165e-12)
 
 [node name="Sprite2D" type="Sprite2D" parent="Background/ParallaxLayer2" index="0"]
+texture = ExtResource("3_qkbfy")
 
 [node name="ParallaxLayer3" type="ParallaxLayer" parent="Background" index="2"]
 motion_scale = Vector2(0.15, 2.08165e-12)
 
 [node name="Sprite2D" type="Sprite2D" parent="Background/ParallaxLayer3" index="0"]
+texture = ExtResource("4_60id3")
 
 [node name="LevelExit" parent="." index="2" instance=ExtResource("2_kmyk6")]
 position = Vector2(-394, 42)
