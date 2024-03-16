@@ -16,6 +16,26 @@
 visible = false
 color = Color(0, 0, 0, 1)
 
+[node name="Background" parent="." index="1"]
+offset = Vector2(2.08165e-12, 600)
+scale = Vector2(0.3, 0.3)
+transform = Transform2D(0.3, 0, 0, 0.3, 2.08165e-12, 600)
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Background" index="0"]
+motion_scale = Vector2(0.05, 2.08165e-12)
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/ParallaxLayer" index="0"]
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="Background" index="1"]
+motion_scale = Vector2(0.1, 2.08165e-12)
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/ParallaxLayer2" index="0"]
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="Background" index="2"]
+motion_scale = Vector2(0.15, 2.08165e-12)
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/ParallaxLayer3" index="0"]
+
 [node name="LevelExit" parent="." index="2" instance=ExtResource("2_kmyk6")]
 position = Vector2(-394, 42)
 

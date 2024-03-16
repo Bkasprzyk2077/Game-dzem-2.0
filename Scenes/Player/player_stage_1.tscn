@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scenes/Player/player.gd" id="1_0reou"]
 [ext_resource type="Texture2D" uid="uid://bsbkan7it7rrb" path="res://Images/PlayerAnimations/sprite_korpus_cell270x110px.png" id="2_ln4yu"]
-[ext_resource type="Texture2D" uid="uid://csiwisyiecgk6" path="res://Images/light.png" id="4_jutob"]
+[ext_resource type="Texture2D" uid="uid://cre2blr7ttac0" path="res://Images/luna.png" id="3_1ka6f"]
 
 [sub_resource type="Animation" id="Animation_3t6wi"]
 length = 0.001
@@ -133,7 +133,7 @@ zoom = Vector2(2, 2)
 position_smoothing_enabled = true
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
-texture = ExtResource("4_jutob")
+texture = ExtResource("3_1ka6f")
 
 [node name="ObjectSocket" type="Marker2D" parent="."]
 position = Vector2(-1, -37)
