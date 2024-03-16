@@ -23,6 +23,7 @@ func _physics_process(delta):
 	
 	move_and_slide()
 	animation()
+	
 
 func get_gravity() -> float:
 	return jump_gravity if velocity.y < 0.0 else fall_gravity

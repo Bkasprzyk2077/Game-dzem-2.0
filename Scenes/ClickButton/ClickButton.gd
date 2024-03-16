@@ -12,6 +12,7 @@ func _ready():
 
 func _process(delta):
 	if area_2d.overlaps_body(get_tree().get_first_node_in_group("player")):
+		$TextureRect.visible = true
 		if Input.is_action_just_pressed("interact"):
 			if !active:
 				point_light_2d.color = green
@@ -19,3 +20,5 @@ func _process(delta):
 			else:
 				point_light_2d.color = red
 				active = false
+	else:
+		$TextureRect.visible = false

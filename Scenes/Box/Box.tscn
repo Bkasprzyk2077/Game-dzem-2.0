@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://cm867fbdng67m"]
+[gd_scene load_steps=6 format=3 uid="uid://cm867fbdng67m"]
 
 [ext_resource type="Texture2D" uid="uid://ceylmf7myh7jl" path="res://Images/icon.svg" id="1_jjryi"]
 [ext_resource type="Script" path="res://Scenes/Box/Box.gd" id="1_lnjeq"]
+[ext_resource type="Texture2D" uid="uid://bty05q12pf5m" path="res://Images/Ui/ui-przycisk1.png" id="3_6t4bq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6w1a3"]
 size = Vector2(30, 30)
@@ -26,3 +27,26 @@ shape = SubResource("RectangleShape2D_6w1a3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractArea"]
 shape = SubResource("CircleShape2D_ilwtd")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+light_mask = 0
+texture_filter = 1
+offset_left = -40.0
+offset_top = -74.0
+offset_right = 40.0
+offset_bottom = 6.0
+scale = Vector2(0.4, 0.4)
+pivot_offset = Vector2(40, 40)
+texture = ExtResource("3_6t4bq")
+
+[node name="Label" type="Label" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 48
+text = "E"
+horizontal_alignment = 1
+vertical_alignment = 1

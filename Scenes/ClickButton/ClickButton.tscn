@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://ma0pmmb7dsdj"]
+[gd_scene load_steps=6 format=3 uid="uid://ma0pmmb7dsdj"]
 
 [ext_resource type="Script" path="res://Scenes/ClickButton/ClickButton.gd" id="1_0okml"]
 [ext_resource type="Texture2D" uid="uid://ceylmf7myh7jl" path="res://Images/icon.svg" id="1_2046k"]
 [ext_resource type="Texture2D" uid="uid://csiwisyiecgk6" path="res://Images/light.png" id="2_ysbw0"]
+[ext_resource type="Texture2D" uid="uid://bty05q12pf5m" path="res://Images/Ui/ui-przycisk1.png" id="4_pepok"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j2vse"]
 size = Vector2(64, 64)
@@ -23,3 +24,25 @@ texture_scale = 0.5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("RectangleShape2D_j2vse")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+light_mask = 0
+texture_filter = 1
+offset_left = -16.0
+offset_top = -68.0
+offset_right = 64.0
+offset_bottom = 12.0
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("4_pepok")
+
+[node name="Label" type="Label" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 48
+text = "E"
+horizontal_alignment = 1
+vertical_alignment = 1
