@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://b5ev03ia8rtcs"]
+
+[ext_resource type="Texture2D" uid="uid://bi4jnixi35303" path="res://Images/Stuff/trybik.png" id="1_vakyg"]
+[ext_resource type="Script" path="res://Scenes/Wheel/Wheel.gd" id="2_5ef0l"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_va4xs"]
+size = Vector2(120, 30)
+
+[node name="Wheel" type="Sprite2D"]
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("1_vakyg")
+script = ExtResource("2_5ef0l")
+
+[node name="AnimatableBody2D" type="AnimatableBody2D" parent="."]
+position = Vector2(-220, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="AnimatableBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatableBody2D"]
+shape = SubResource("RectangleShape2D_va4xs")
+
+[node name="AnimatableBody2D2" type="AnimatableBody2D" parent="."]
+position = Vector2(207.5, -3.05176e-05)
+
+[node name="Sprite2D" type="Sprite2D" parent="AnimatableBody2D2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatableBody2D2"]
+shape = SubResource("RectangleShape2D_va4xs")
