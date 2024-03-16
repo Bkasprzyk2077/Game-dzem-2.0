@@ -1,9 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://c1iy20rnn1nvs"]
+[gd_scene load_steps=5 format=3 uid="uid://c1iy20rnn1nvs"]
 
 [ext_resource type="PackedScene" uid="uid://dtp10shdne2l2" path="res://Scenes/Player/player.tscn" id="1_6ncrx"]
 [ext_resource type="Texture2D" uid="uid://c8byt444v1dqm" path="res://Images/Terrain (32x32).png" id="1_cd4mq"]
-[ext_resource type="Texture2D" uid="uid://ceylmf7myh7jl" path="res://Images/icon.svg" id="2_wvfd2"]
-[ext_resource type="PackedScene" uid="uid://qnp6c5yg5i12" path="res://Scenes/Note/Note.tscn" id="4_0kw4u"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_eio4m"]
 texture = ExtResource("1_cd4mq")
@@ -1152,33 +1150,10 @@ texture = ExtResource("1_cd4mq")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_eio4m")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_u748o"]
-size = Vector2(1000, 20)
-
 [node name="Main" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_vrk6x")
 format = 2
-layer_0/tile_data = PackedInt32Array(720865, 196608, 10, 720866, 262144, 10, 720867, 327680, 10, 720868, 393216, 10, 720869, 196608, 10, 720870, 262144, 10, 720871, 327680, 10, 720872, 393216, 10, 720873, 196608, 10, 720874, 262144, 10, 720875, 327680, 10, 720876, 393216, 10, 720877, 196608, 10, 720878, 262144, 10, 720879, 327680, 10, 720880, 393216, 10, 720881, 196608, 10, 720882, 262144, 10, 720883, 327680, 10, 720884, 393216, 10, 720885, 196608, 10, 720886, 262144, 10, 720887, 327680, 10, 720888, 393216, 10, 720889, 196608, 10, 720890, 262144, 10, 720891, 327680, 10, 720892, 393216, 10, 720893, 196608, 10, 720894, 262144, 10, 720895, 327680, 10, 655360, 393216, 10, 655361, 196608, 10, 655362, 262144, 10, 655363, 327680, 10, 655364, 393216, 10, 655365, 196608, 10, 655366, 262144, 10, 655367, 327680, 10, 655368, 393216, 10, 655369, 196608, 10, 655370, 262144, 10, 655371, 327680, 10, 655372, 393216, 10, 655373, 196608, 10, 655374, 262144, 10, 655375, 327680, 10, 655376, 393216, 10)
 
 [node name="Player" parent="." instance=ExtResource("1_6ncrx")]
-
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-visible = false
-position = Vector2(2.08165e-12, 100)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-shape = SubResource("RectangleShape2D_u748o")
-disabled = true
-
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
-position = Vector2(-0.999985, 1)
-scale = Vector2(7.82812, 0.171875)
-texture = ExtResource("2_wvfd2")
-
-[node name="Camera2D" type="Camera2D" parent="."]
-enabled = false
-
-[node name="Note" parent="." instance=ExtResource("4_0kw4u")]
-position = Vector2(-158, 136)
