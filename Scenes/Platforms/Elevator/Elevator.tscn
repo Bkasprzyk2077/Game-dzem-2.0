@@ -10,7 +10,7 @@ size = Vector2(100, 20)
 script = ExtResource("1_wnx07")
 time_to_reach = 3.0
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="StaticBody2D" type="AnimatableBody2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
 position = Vector2(0, -1.90735e-06)
