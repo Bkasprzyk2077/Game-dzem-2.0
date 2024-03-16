@@ -1,9 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://c1iy20rnn1nvs"]
+[gd_scene load_steps=9 format=3 uid="uid://c1iy20rnn1nvs"]
 
-[ext_resource type="PackedScene" uid="uid://dtp10shdne2l2" path="res://Scenes/Player/player.tscn" id="1_6ncrx"]
 [ext_resource type="Texture2D" uid="uid://c8byt444v1dqm" path="res://Images/Terrain (32x32).png" id="1_cd4mq"]
 [ext_resource type="Script" path="res://main.gd" id="1_osnqo"]
-[ext_resource type="Texture2D" uid="uid://dxjk6oghb2axb" path="res://Images/background.png" id="2_dom6c"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_eio4m"]
 texture = ExtResource("1_cd4mq")
@@ -1212,23 +1210,10 @@ script = ExtResource("1_osnqo")
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 
 [node name="Background" type="ParallaxBackground" parent="."]
-scale = Vector2(3, 3)
-transform = Transform2D(3, 0, 0, 3, 0, 0)
-
-[node name="ParallaxLayer" type="ParallaxLayer" parent="Background"]
-motion_scale = Vector2(0.01, 0.01)
-
-[node name="Sprite2D" type="Sprite2D" parent="Background/ParallaxLayer"]
-position = Vector2(-137.667, -90)
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("2_dom6c")
-offset = Vector2(2400, 1350)
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_vrk6x")
 format = 2
-
-[node name="Player" parent="." instance=ExtResource("1_6ncrx")]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
