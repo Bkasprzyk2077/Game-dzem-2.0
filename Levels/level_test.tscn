@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dlbf7o41tucyn"]
+[gd_scene load_steps=9 format=3 uid="uid://dlbf7o41tucyn"]
 
 [ext_resource type="PackedScene" uid="uid://c1iy20rnn1nvs" path="res://main.tscn" id="1_oh5gk"]
 [ext_resource type="PackedScene" uid="uid://cecb21a5reyn4" path="res://Scenes/LevelExit/LevelExit.tscn" id="2_kmyk6"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://ma0pmmb7dsdj" path="res://Scenes/ClickButton/ClickButton.tscn" id="5_kbyc0"]
 [ext_resource type="PackedScene" uid="uid://c0vl0nk1sf70n" path="res://Scenes/Platforms/Elevator/Elevator.tscn" id="6_6gcbu"]
 [ext_resource type="PackedScene" uid="uid://cm867fbdng67m" path="res://Scenes/Box/Box.tscn" id="7_bt3pl"]
+[ext_resource type="PackedScene" uid="uid://qnp6c5yg5i12" path="res://Scenes/Note/Note.tscn" id="7_jsorv"]
 
 [node name="level_test" instance=ExtResource("1_oh5gk")]
 
@@ -43,7 +44,10 @@ key = NodePath("../ClickButton")
 [node name="End" parent="Elevator" index="2"]
 position = Vector2(239, -219)
 
-[node name="Box" parent="." index="10" instance=ExtResource("7_bt3pl")]
+[node name="Note" parent="." index="10" instance=ExtResource("7_jsorv")]
+position = Vector2(62, 77)
+
+[node name="Box" parent="." index="11" instance=ExtResource("7_bt3pl")]
 position = Vector2(145, 79)
 
 [editable path="Doors"]
