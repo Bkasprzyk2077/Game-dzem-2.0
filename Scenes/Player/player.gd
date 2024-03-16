@@ -39,7 +39,7 @@ func get_input_velocity() -> float:
 	return horizontal
 	
 func animation():
-	if velocity.x > 0:
+	if velocity.x >= 0:
 		sprite.flip_h = false
 	else:
 		sprite.flip_h = true
