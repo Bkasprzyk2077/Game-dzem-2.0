@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://dtp10shdne2l2"]
+[gd_scene load_steps=30 format=3 uid="uid://dtp10shdne2l2"]
 
 [ext_resource type="Script" path="res://Scenes/Player/player.gd" id="1_ukwyh"]
 [ext_resource type="Texture2D" uid="uid://cbx4evwxsv00j" path="res://Images/PlayerAnimations/Idle (78x58).png" id="2_p2dc4"]
@@ -190,6 +190,9 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_w6fur"]
 radius = 14.79
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_phsb5"]
+radius = 30.0
+
 [node name="Player" type="CharacterBody2D" groups=["box", "player"]]
 script = ExtResource("1_ukwyh")
 move_speed = 200.0
@@ -221,3 +224,8 @@ texture = ExtResource("4_nshj2")
 
 [node name="ObjectSocket" type="Marker2D" parent="."]
 position = Vector2(-1, -37)
+
+[node name="BoxDetector" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BoxDetector"]
+shape = SubResource("CircleShape2D_phsb5")
