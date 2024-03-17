@@ -18,11 +18,3 @@ position = Vector2(-220, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatableBody2D"]
 shape = SubResource("RectangleShape2D_va4xs")
-
-[node name="AnimatableBody2D2" type="AnimatableBody2D" parent="."]
-position = Vector2(207.5, -3.05176e-05)
-
-[node name="Sprite2D" type="Sprite2D" parent="AnimatableBody2D2"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatableBody2D2"]
-shape = SubResource("RectangleShape2D_va4xs")

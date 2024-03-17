@@ -1230,3 +1230,5 @@ color = Color(0, 0, 0, 1)
 libraries = {
 "": SubResource("AnimationLibrary_gc4p1")
 }
+
+[node name="Items" type="Node2D" parent="."]
