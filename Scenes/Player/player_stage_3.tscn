@@ -160,7 +160,7 @@ shape = SubResource("CapsuleShape2D_hii30")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(-3, -56)
-zoom = Vector2(2, 2)
+zoom = Vector2(1.5, 1.5)
 position_smoothing_enabled = true
 
 [node name="PointLight2D" type="PointLight2D" parent="."]

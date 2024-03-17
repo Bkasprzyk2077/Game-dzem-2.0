@@ -1,21 +1,23 @@
 [gd_scene load_steps=4 format=3 uid="uid://cecb21a5reyn4"]
 
 [ext_resource type="Script" path="res://Scenes/LevelExit/LevelExit.gd" id="1_lynar"]
-[ext_resource type="Texture2D" uid="uid://ceylmf7myh7jl" path="res://Images/icon.svg" id="1_mxeo2"]
+[ext_resource type="Texture2D" uid="uid://dxg60kg6ow7rh" path="res://Images/Stuff2/Strzałka .png" id="2_s3gt3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3isbm"]
-size = Vector2(127, 127)
+size = Vector2(150, 216)
 
 [node name="LevelExit" type="Node2D"]
 script = ExtResource("1_lynar")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_mxeo2")
+position = Vector2(2, -35)
+scale = Vector2(0.55, 0.55)
+texture = ExtResource("2_s3gt3")
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(0.5, -0.5)
+position = Vector2(12, -45)
 shape = SubResource("RectangleShape2D_3isbm")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
