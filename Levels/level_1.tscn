@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://bna381mciwbin"]
+[gd_scene load_steps=26 format=3 uid="uid://bna381mciwbin"]
 
 [ext_resource type="PackedScene" uid="uid://c1iy20rnn1nvs" path="res://main.tscn" id="1_83b1s"]
 [ext_resource type="Texture2D" uid="uid://bbfo4gkkln41d" path="res://Images/Bg1/IMG_7479.png" id="2_c5u6k"]
@@ -17,6 +17,11 @@
 [ext_resource type="Texture2D" uid="uid://bwi2t7kye77cu" path="res://Images/Stuff/Rury.png" id="14_816ei"]
 [ext_resource type="PackedScene" uid="uid://c6fsks4gn6edf" path="res://Scenes/Trash/Trash.tscn" id="15_64x4n"]
 [ext_resource type="Texture2D" uid="uid://bi4jnixi35303" path="res://Images/Stuff/trybik.png" id="17_bnkcy"]
+[ext_resource type="PackedScene" uid="uid://ccdix711b2a4s" path="res://Scenes/LightBuble/LightBuble.tscn" id="18_6smhu"]
+[ext_resource type="Texture2D" uid="uid://cfr7a3ha5vo6g" path="res://Images/Stuff2/IMG_7512.png" id="19_b7535"]
+[ext_resource type="Texture2D" uid="uid://dvuf8q3snescp" path="res://Images/Stuff2/IMG_7513.png" id="20_61fkj"]
+[ext_resource type="Texture2D" uid="uid://bxwop5tonyynb" path="res://Images/Stuff2/IMG_7514.png" id="21_q1y67"]
+[ext_resource type="Texture2D" uid="uid://ddetvpvwnxv4" path="res://Images/Stuff2/IMG_7515.png" id="22_n7861"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xgjyk"]
 texture = ExtResource("2_k6nwd")
@@ -234,6 +239,7 @@ scale = Vector2(0.388957, 0.476772)
 texture = ExtResource("13_28h13")
 
 [node name="Rury" type="Sprite2D" parent="Items" index="5"]
+z_index = -1
 position = Vector2(5111, -107)
 rotation = -0.361137
 texture = ExtResource("14_816ei")
@@ -272,7 +278,7 @@ texture = ExtResource("17_bnkcy")
 stream = ExtResource("6_kfcrl")
 
 [node name="Player_stage_1" parent="." index="6" instance=ExtResource("3_0aagw")]
-position = Vector2(410, -97)
+position = Vector2(37, -98)
 
 [node name="Elevator" parent="." index="7" node_paths=PackedStringArray("key") instance=ExtResource("7_584gu")]
 position = Vector2(1535, 153)
@@ -301,7 +307,7 @@ position = Vector2(4620, 432)
 [node name="Wheel2" parent="." index="12" instance=ExtResource("10_8n0dc")]
 position = Vector2(4920, 428)
 
-[node name="AnimatableBody2D" parent="Wheel2" index="0"]
+[node name="AnimatableBody2D" parent="Wheel2" index="1"]
 position = Vector2(220, 2.08165e-12)
 
 [node name="FallDetector" parent="." index="13"]
@@ -329,22 +335,53 @@ position = Vector2(5679.45, -179.08)
 position = Vector2(2.08165e-12, -300)
 
 [node name="Note" parent="." index="17" instance=ExtResource("11_hiqdu")]
-position = Vector2(4578, 28)
+position = Vector2(425, -108)
 note_text = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
 
-[node name="Doors2" parent="." index="18" node_paths=PackedStringArray("key") instance=ExtResource("9_ry1c8")]
-position = Vector2(4675, 0)
+[node name="Note2" parent="." index="18" instance=ExtResource("11_hiqdu")]
+position = Vector2(4573, 3)
+note_text = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+
+[node name="Doors2" parent="." index="19" node_paths=PackedStringArray("key") instance=ExtResource("9_ry1c8")]
+position = Vector2(4690, -66)
 key = NodePath("../Dorrs2Button")
 
 [node name="End" parent="Doors2" index="2"]
-position = Vector2(1, -173)
+position = Vector2(-2, -274)
 
-[node name="Dorrs2Button" parent="." index="19" instance=ExtResource("8_gsa8t")]
+[node name="Dorrs2Button" parent="." index="20" instance=ExtResource("8_gsa8t")]
 position = Vector2(4385, 218)
 
-[node name="LevelExit" parent="." index="20" instance=ExtResource("11_sw5ep")]
+[node name="LevelExit" parent="." index="21" instance=ExtResource("11_sw5ep")]
 position = Vector2(6184, -527)
 next_level = "res://Levels/level_2.tscn"
+
+[node name="LightBuble" parent="." index="22" instance=ExtResource("18_6smhu")]
+position = Vector2(997, -36)
+
+[node name="LightBuble2" parent="." index="23" instance=ExtResource("18_6smhu")]
+position = Vector2(2373, 125)
+
+[node name="LightBuble3" parent="." index="24" instance=ExtResource("18_6smhu")]
+position = Vector2(3761, 83)
+rotation = 0.734815
+
+[node name="Img7512" type="Sprite2D" parent="." index="25"]
+position = Vector2(5363, 315)
+texture = ExtResource("19_b7535")
+
+[node name="Img7513" type="Sprite2D" parent="." index="26"]
+position = Vector2(5945, -581)
+texture = ExtResource("20_61fkj")
+
+[node name="Img7514" type="Sprite2D" parent="." index="27"]
+position = Vector2(2738, -88)
+rotation = -0.808793
+texture = ExtResource("21_q1y67")
+
+[node name="Img7515" type="Sprite2D" parent="." index="28"]
+position = Vector2(1634, -69)
+texture = ExtResource("22_n7861")
 
 [editable path="Elevator"]
 [editable path="Doors"]

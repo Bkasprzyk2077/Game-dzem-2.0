@@ -265,7 +265,7 @@ position = Vector2(-809, -585)
 [node name="Wheel" parent="." index="16" instance=ExtResource("13_ib5q5")]
 position = Vector2(1651, 989)
 
-[node name="AnimatableBody2D" parent="Wheel" index="0"]
+[node name="AnimatableBody2D" parent="Wheel" index="1"]
 position = Vector2(220, 2.08165e-12)
 
 [node name="Wheel2" parent="." index="17" instance=ExtResource("13_ib5q5")]
@@ -274,7 +274,7 @@ position = Vector2(2010, 826)
 [node name="Wheel3" parent="." index="18" instance=ExtResource("13_ib5q5")]
 position = Vector2(2293, 980)
 
-[node name="AnimatableBody2D" parent="Wheel3" index="0"]
+[node name="AnimatableBody2D" parent="Wheel3" index="1"]
 position = Vector2(220, 2.08165e-12)
 
 [node name="Wheel4" parent="." index="19" instance=ExtResource("13_ib5q5")]
@@ -283,7 +283,7 @@ position = Vector2(2598, 829)
 [node name="Wheel5" parent="." index="20" instance=ExtResource("13_ib5q5")]
 position = Vector2(2862, 987)
 
-[node name="AnimatableBody2D" parent="Wheel5" index="0"]
+[node name="AnimatableBody2D" parent="Wheel5" index="1"]
 position = Vector2(220, 2.08165e-12)
 
 [node name="Trash" parent="." index="21" instance=ExtResource("13_kqijd")]

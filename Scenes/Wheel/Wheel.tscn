@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://b5ev03ia8rtcs"]
+[gd_scene load_steps=7 format=3 uid="uid://b5ev03ia8rtcs"]
 
 [ext_resource type="Texture2D" uid="uid://bi4jnixi35303" path="res://Images/Stuff/trybik.png" id="1_vakyg"]
 [ext_resource type="Script" path="res://Scenes/Wheel/Wheel.gd" id="2_5ef0l"]
 [ext_resource type="Texture2D" uid="uid://d3klrdevu7icr" path="res://Images/Stuff/blacha.png" id="3_p1rpt"]
+[ext_resource type="PackedScene" uid="uid://ccdix711b2a4s" path="res://Scenes/LightBuble/LightBuble.tscn" id="3_p8u83"]
 [ext_resource type="AudioStream" uid="uid://c6squq05ifl5q" path="res://Audio/recyclebin-102273.mp3" id="4_x8pu1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_va4xs"]
@@ -12,6 +13,9 @@ size = Vector2(187.5, 32.5)
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("1_vakyg")
 script = ExtResource("2_5ef0l")
+
+[node name="LightBuble" parent="." instance=ExtResource("3_p8u83")]
+scale = Vector2(1, 1)
 
 [node name="AnimatableBody2D" type="AnimatableBody2D" parent="."]
 position = Vector2(-220, 0)
