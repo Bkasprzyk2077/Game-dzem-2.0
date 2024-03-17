@@ -345,6 +345,7 @@ position = Vector2(4385, 218)
 
 [node name="LevelExit" parent="." index="20" instance=ExtResource("11_sw5ep")]
 position = Vector2(6184, -527)
+next_level = "res://Levels/level_2.tscn"
 
 [editable path="Elevator"]
 [editable path="Doors"]
