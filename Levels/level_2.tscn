@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://h78i2qcpm5qq"]
+[gd_scene load_steps=22 format=3 uid="uid://h78i2qcpm5qq"]
 
 [ext_resource type="PackedScene" uid="uid://c1iy20rnn1nvs" path="res://main.tscn" id="1_px6ay"]
 [ext_resource type="Texture2D" uid="uid://dtqu4oohj1nb3" path="res://Images/Bg2/IMG_7483.png" id="2_0bgeo"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dfx6mjnywjmnh" path="res://Images/Bg2/IMG_7484.png" id="3_ky1gk"]
 [ext_resource type="PackedScene" uid="uid://dfy063orjuprb" path="res://Scenes/Player/player_stage_2.tscn" id="4_js1c6"]
 [ext_resource type="Texture2D" uid="uid://cl5isxn2dmued" path="res://Images/Bg2/IMG_7485.png" id="4_rrbwe"]
+[ext_resource type="PackedScene" uid="uid://cl41igdtn74v2" path="res://Scenes/Player/player_stage_1.tscn" id="7_0aohg"]
 [ext_resource type="PackedScene" uid="uid://c0vl0nk1sf70n" path="res://Scenes/Platforms/Elevator/Elevator.tscn" id="8_5mbbs"]
 [ext_resource type="PackedScene" uid="uid://d02divua3fcjo" path="res://Scenes/Doors/Doors.tscn" id="9_ivgk4"]
 [ext_resource type="PackedScene" uid="uid://ma0pmmb7dsdj" path="res://Scenes/ClickButton/ClickButton.tscn" id="10_q4af0"]
@@ -199,6 +200,9 @@ motion_scale = Vector2(0.1, 2.08165e-12)
 [node name="Sprite2D" type="Sprite2D" parent="Background/ParallaxLayer3" index="0"]
 texture = ExtResource("4_rrbwe")
 
+[node name="CanvasModulate" parent="." index="1"]
+color = Color(0, 0, 0, 1)
+
 [node name="AssetyPoziom3_1" type="Sprite2D" parent="." index="2"]
 position = Vector2(293, -673)
 scale = Vector2(0.7, 0.7)
@@ -214,37 +218,37 @@ position = Vector2(67, 2193)
 [node name="CollisionShape2D" parent="FallDetector" index="0"]
 shape = SubResource("RectangleShape2D_lm4rd")
 
-[node name="Player_stage_1" parent="." index="8" instance=ExtResource("4_js1c6")]
-position = Vector2(-739, -765)
-
-[node name="Elevator" parent="." index="9" instance=ExtResource("8_5mbbs")]
+[node name="Elevator" parent="." index="8" instance=ExtResource("8_5mbbs")]
 position = Vector2(1561, -124)
 
 [node name="End" parent="Elevator" index="2"]
 position = Vector2(372, -403)
 
-[node name="Elevator2" parent="." index="10" instance=ExtResource("8_5mbbs")]
+[node name="Elevator2" parent="." index="9" instance=ExtResource("8_5mbbs")]
 position = Vector2(2377, 1)
 
 [node name="End" parent="Elevator2" index="2"]
 position = Vector2(352, -164)
 
-[node name="Elevator3" parent="." index="11" instance=ExtResource("8_5mbbs")]
+[node name="Elevator3" parent="." index="10" instance=ExtResource("8_5mbbs")]
 position = Vector2(2211, 5)
 
 [node name="End" parent="Elevator3" index="2"]
 position = Vector2(-8, -527)
 
-[node name="Doors" parent="." index="12" node_paths=PackedStringArray("key") instance=ExtResource("9_ivgk4")]
+[node name="Doors" parent="." index="11" node_paths=PackedStringArray("key") instance=ExtResource("9_ivgk4")]
 position = Vector2(938, -578)
 key = NodePath("../ClickButton")
 
-[node name="ClickButton" parent="." index="13" instance=ExtResource("10_q4af0")]
+[node name="ClickButton" parent="." index="12" instance=ExtResource("10_q4af0")]
 position = Vector2(-25, -741)
 
-[node name="ChangeCharacter" parent="." index="14" instance=ExtResource("11_5xn0p")]
+[node name="ChangeCharacter" parent="." index="13" instance=ExtResource("11_5xn0p")]
 position = Vector2(114, -333)
 new_character = ExtResource("4_js1c6")
+
+[node name="Player_stage_1" parent="." index="14" instance=ExtResource("7_0aohg")]
+position = Vector2(-809, -585)
 
 [node name="Wheel" parent="." index="15" instance=ExtResource("13_ib5q5")]
 position = Vector2(1651, 989)
@@ -293,6 +297,7 @@ texture = ExtResource("16_f1shf")
 
 [node name="LevelExit" parent="." index="26" instance=ExtResource("17_j5ahj")]
 position = Vector2(-456, 356)
+next_level = "res://Levels/level_3.tscn"
 
 [editable path="Elevator"]
 [editable path="Elevator2"]

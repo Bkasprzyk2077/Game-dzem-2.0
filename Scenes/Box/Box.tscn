@@ -1,14 +1,14 @@
 [gd_scene load_steps=6 format=3 uid="uid://cm867fbdng67m"]
 
-[ext_resource type="Texture2D" uid="uid://ceylmf7myh7jl" path="res://Images/icon.svg" id="1_jjryi"]
 [ext_resource type="Script" path="res://Scenes/Box/Box.gd" id="1_lnjeq"]
+[ext_resource type="Texture2D" uid="uid://bfa8gfdfo7fsj" path="res://Images/Stuff/Skrzynia.png" id="2_qsvld"]
 [ext_resource type="Texture2D" uid="uid://bty05q12pf5m" path="res://Images/Ui/ui-przycisk1.png" id="3_6t4bq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6w1a3"]
-size = Vector2(30, 30)
+size = Vector2(44, 46)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ilwtd"]
-radius = 34.3
+radius = 55.56
 
 [node name="Box" type="RigidBody2D" groups=["box"]]
 mass = 0.3
@@ -18,7 +18,7 @@ script = ExtResource("1_lnjeq")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(1.90735e-06, -1.90735e-06)
 scale = Vector2(0.234375, 0.234375)
-texture = ExtResource("1_jjryi")
+texture = ExtResource("2_qsvld")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_6w1a3")
@@ -31,9 +31,9 @@ shape = SubResource("CircleShape2D_ilwtd")
 [node name="TextureRect" type="TextureRect" parent="."]
 texture_filter = 1
 offset_left = -40.0
-offset_top = -74.0
+offset_top = -86.0
 offset_right = 40.0
-offset_bottom = 6.0
+offset_bottom = -6.0
 scale = Vector2(0.4, 0.4)
 pivot_offset = Vector2(40, 40)
 texture = ExtResource("3_6t4bq")

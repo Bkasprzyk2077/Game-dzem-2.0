@@ -201,7 +201,6 @@ motion_scale = Vector2(0.1, 2.08165e-12)
 texture = ExtResource("4_fajkt")
 
 [node name="CanvasModulate" parent="." index="1"]
-visible = false
 color = Color(0, 0, 0, 1)
 
 [node name="TileMap" parent="." index="2"]
