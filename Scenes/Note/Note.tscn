@@ -21,6 +21,7 @@ texture = ExtResource("1_jfrt3")
 shape = SubResource("RectangleShape2D_eucif")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
 custom_minimum_size = Vector2(500, 500)
@@ -47,7 +48,6 @@ text = "Lorem ipsum sin doront"
 autowrap_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="."]
-light_mask = 0
 texture_filter = 1
 offset_left = -40.0
 offset_top = -74.0
