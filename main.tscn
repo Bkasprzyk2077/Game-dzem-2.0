@@ -1232,3 +1232,5 @@ libraries = {
 }
 
 [node name="Items" type="Node2D" parent="."]
+
+[node name="BgAudio" type="AudioStreamPlayer" parent="."]

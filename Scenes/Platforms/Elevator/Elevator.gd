@@ -3,12 +3,15 @@ extends Node2D
 @onready var static_body_2d = $StaticBody2D
 @onready var start = $Start
 @onready var end = $End
+@onready var audio_stream_player_2d = $AudioStreamPlayer2D
 
 @export var key: Node
 @export var time_to_reach: float
 var is_moving = false
 
 func _physics_process(delta):
+	if audio_stream_player_2d.playing == false:
+		audio_stream_player_2d.play()
 	if key.active:
 		if is_moving:
 			return

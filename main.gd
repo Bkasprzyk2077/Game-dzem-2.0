@@ -11,3 +11,7 @@ func change_level(next_level):
 	animation_player.play("out")
 	await animation_player.animation_finished
 	get_tree().change_scene_to_file(next_level)
+	
+func _process(delta):
+	if $BgAudio.playing == false:
+		$BgAudio.play()
