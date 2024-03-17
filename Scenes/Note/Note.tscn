@@ -1,8 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://qnp6c5yg5i12"]
+[gd_scene load_steps=7 format=3 uid="uid://qnp6c5yg5i12"]
 
 [ext_resource type="Texture2D" uid="uid://ceylmf7myh7jl" path="res://Images/icon.svg" id="1_jfrt3"]
 [ext_resource type="Script" path="res://Scenes/Note/Note.gd" id="1_m5o72"]
 [ext_resource type="Texture2D" uid="uid://bty05q12pf5m" path="res://Images/Ui/ui-przycisk1.png" id="3_l2uko"]
+[ext_resource type="Texture2D" uid="uid://4mp71r3uskh6" path="res://Images/Ui/cmd.png" id="3_pkgen"]
+[ext_resource type="FontFile" uid="uid://cm7wiq4p83qav" path="res://Scenes/Note/CascadiaCodePL-SemiLight.otf" id="4_bhrto"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eucif"]
 size = Vector2(30, 30)
@@ -36,18 +38,19 @@ offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
-texture = ExtResource("1_jfrt3")
+texture = ExtResource("3_pkgen")
 
 [node name="Label" type="Label" parent="CanvasLayer/TextureRect"]
 layout_mode = 0
-offset_right = 495.0
-offset_bottom = 503.0
+offset_top = 31.0
+offset_right = 969.0
+offset_bottom = 663.0
+theme_override_fonts/font = ExtResource("4_bhrto")
 theme_override_font_sizes/font_size = 32
 text = "Lorem ipsum sin doront"
 autowrap_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="."]
-light_mask = 0
 texture_filter = 1
 offset_left = -40.0
 offset_top = -74.0

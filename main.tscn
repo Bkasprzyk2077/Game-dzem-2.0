@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://c1iy20rnn1nvs"]
+[gd_scene load_steps=10 format=3 uid="uid://c1iy20rnn1nvs"]
 
 [ext_resource type="Texture2D" uid="uid://c8byt444v1dqm" path="res://Images/Terrain (32x32).png" id="1_cd4mq"]
 [ext_resource type="Script" path="res://main.gd" id="1_osnqo"]
@@ -1204,6 +1204,8 @@ _data = {
 "out": SubResource("Animation_ed5ak")
 }
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k4il2"]
+
 [node name="Main" type="Node2D"]
 script = ExtResource("1_osnqo")
 
@@ -1232,3 +1234,13 @@ libraries = {
 }
 
 [node name="Items" type="Node2D" parent="."]
+
+[node name="BgAudio" type="AudioStreamPlayer" parent="."]
+
+[node name="FallDetector" type="Area2D" parent="."]
+position = Vector2(2.08165e-12, 400)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FallDetector"]
+shape = SubResource("RectangleShape2D_k4il2")
+
+[connection signal="body_entered" from="FallDetector" to="." method="_on_fall_detector_body_entered"]

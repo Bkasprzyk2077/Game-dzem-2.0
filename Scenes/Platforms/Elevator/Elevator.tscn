@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://c0vl0nk1sf70n"]
+[gd_scene load_steps=6 format=3 uid="uid://c0vl0nk1sf70n"]
 
 [ext_resource type="Script" path="res://Scenes/Platforms/Elevator/Elevator.gd" id="1_wnx07"]
 [ext_resource type="Texture2D" uid="uid://b4dls7reiwy8r" path="res://Images/Stuff/lewitująca-platforma-uwu.png" id="2_ft2pa"]
 [ext_resource type="Texture2D" uid="uid://cre2blr7ttac0" path="res://Images/luna.png" id="3_7jabl"]
+[ext_resource type="AudioStream" uid="uid://7ttv8s3fdpui" path="res://Audio/howling-wind-109590.mp3" id="4_yicmw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sd3v1"]
 size = Vector2(144, 20)
@@ -30,3 +31,8 @@ texture = ExtResource("3_7jabl")
 [node name="Start" type="Marker2D" parent="."]
 
 [node name="End" type="Marker2D" parent="."]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_yicmw")
+autoplay = true
+attenuation = 11.3137

@@ -25,7 +25,6 @@ texture = ExtResource("3_xcqg1")
 shape = SubResource("RectangleShape2D_j2vse")
 
 [node name="TextureRect" type="TextureRect" parent="."]
-light_mask = 0
 texture_filter = 1
 offset_left = -16.0
 offset_top = -68.0

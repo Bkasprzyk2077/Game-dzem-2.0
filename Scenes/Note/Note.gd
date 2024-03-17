@@ -4,6 +4,10 @@ extends Node2D
 @onready var area_2d = $Area2D
 @onready var label = $CanvasLayer/TextureRect/Label
 @onready var texture_rect = $TextureRect
+@export var note_text: String
+
+func _ready():
+	label.text = note_text
 
 func _process(delta):
 	if area_2d.overlaps_body(get_tree().get_first_node_in_group("player")):
@@ -23,6 +27,6 @@ func load_text():
 	label.visible_ratio = 0.0
 	#label.text = get("text"+str(t)+"_"+str(n)) + "[/color]"
 	tween.tween_property(
-		label, "visible_ratio", 1.0, 1
+		label, "visible_ratio", 1.0, 5
 	)
 	#tween.start()

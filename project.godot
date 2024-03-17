@@ -13,6 +13,7 @@ config_version=5
 config/name="Game-dzem-2.0"
 run/main_scene="res://Levels/level_test.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
+boot_splash/image="res://Images/background.png"
 config/icon="res://Images/icon.svg"
 
 [display]
