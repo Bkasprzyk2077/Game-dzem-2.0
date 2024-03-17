@@ -17,8 +17,10 @@ func _process(delta):
 			if !active:
 				point_light_2d.color = green
 				active = true
+				$AudioStreamPlayer2D.play()
 			else:
 				point_light_2d.color = red
 				active = false
+				$AudioStreamPlayer2D.play()
 	else:
 		$TextureRect.visible = false
