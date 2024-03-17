@@ -10,6 +10,8 @@ func _process(delta):
 		if Input.is_action_just_pressed("interact"):
 			change_character()
 			queue_free()
+	else:
+		texture_rect.visible = false
 			
 func change_character():
 	var new_character_instance = new_character.instantiate()
