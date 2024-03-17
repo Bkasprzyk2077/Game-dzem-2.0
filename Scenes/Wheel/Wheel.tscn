@@ -20,9 +20,10 @@ position = Vector2(-220, 0)
 rotation = -1.5708
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("3_p1rpt")
+offset = Vector2(24, 2.08165e-12)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatableBody2D"]
-position = Vector2(-3.75, 8.75)
+position = Vector2(-2.38419e-07, 2.27374e-13)
 shape = SubResource("RectangleShape2D_va4xs")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
