@@ -16,18 +16,15 @@
 [ext_resource type="Texture2D" uid="uid://d3klrdevu7icr" path="res://Images/Stuff/blacha.png" id="14_afunh"]
 [ext_resource type="Texture2D" uid="uid://bwi2t7kye77cu" path="res://Images/Stuff/Rury.png" id="15_d22lo"]
 [ext_resource type="PackedScene" uid="uid://cbtnln7e4ooxg" path="res://Scenes/ChangeCharacter/ChangeCharacter.tscn" id="16_yqenf"]
-[ext_resource type="PackedScene" uid="uid://dtp10shdne2l2" path="res://Scenes/Player/player.tscn" id="17_agneh"]
+[ext_resource type="PackedScene" uid="uid://dfy063orjuprb" path="res://Scenes/Player/player_stage_2.tscn" id="17_1yng2"]
 
 [node name="level_test" instance=ExtResource("1_oh5gk")]
 
-[node name="CanvasModulate" parent="." index="0"]
-color = Color(0, 0, 0, 1)
-
-[node name="Background" parent="." index="1"]
+[node name="Background" parent="." index="0"]
 offset = Vector2(1056, 600)
 scale = Vector2(0.7, 0.7)
 transform = Transform2D(0.7, 0, 0, 0.7, 1056, 600)
-scroll_offset = Vector2(-617.179, 407.856)
+scroll_offset = Vector2(-2346.62, -185.268)
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="Background" index="0"]
 motion_scale = Vector2(0.05, 2.08165e-12)
@@ -46,6 +43,9 @@ motion_scale = Vector2(0.15, 2.08165e-12)
 
 [node name="Sprite2D" type="Sprite2D" parent="Background/ParallaxLayer3" index="0"]
 texture = ExtResource("4_60id3")
+
+[node name="CanvasModulate" parent="." index="1"]
+color = Color(0, 0, 0, 1)
 
 [node name="LevelExit" parent="." index="2" instance=ExtResource("2_kmyk6")]
 position = Vector2(-394, 42)
@@ -98,7 +98,7 @@ texture = ExtResource("15_d22lo")
 
 [node name="ChangeCharacter" parent="." index="14" instance=ExtResource("16_yqenf")]
 position = Vector2(596, 28)
-new_character = ExtResource("17_agneh")
+new_character = ExtResource("17_1yng2")
 
 [editable path="Doors"]
 [editable path="Elevator"]

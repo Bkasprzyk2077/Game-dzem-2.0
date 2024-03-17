@@ -1,0 +1,147 @@
+[gd_scene load_steps=17 format=3 uid="uid://dfy063orjuprb"]
+
+[ext_resource type="Script" path="res://Scenes/Player/player.gd" id="1_y3rpc"]
+[ext_resource type="Texture2D" uid="uid://c10qchrxxc0uj" path="res://Images/PlayerAnimations/idle_obie_nogi_spritesheet.png" id="2_e5cb8"]
+[ext_resource type="Texture2D" uid="uid://cre2blr7ttac0" path="res://Images/luna.png" id="3_o64r2"]
+
+[sub_resource type="Animation" id="Animation_3t6wi"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_c5xwc"]
+resource_name = "test"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-20, 2.08165e-12), Vector2(20, 2.08165e-12)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kanqy"]
+_data = {
+"RESET": SubResource("Animation_3t6wi"),
+"test": SubResource("Animation_c5xwc")
+}
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cj286"]
+atlas = ExtResource("2_e5cb8")
+region = Rect2(0, 0, 150, 220)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jtf23"]
+atlas = ExtResource("2_e5cb8")
+region = Rect2(150, 0, 150, 220)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xl3dw"]
+atlas = ExtResource("2_e5cb8")
+region = Rect2(300, 0, 150, 220)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m6bvd"]
+atlas = ExtResource("2_e5cb8")
+region = Rect2(450, 0, 150, 220)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_trwbm"]
+atlas = ExtResource("2_e5cb8")
+region = Rect2(0, 0, 150, 220)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2auge"]
+atlas = ExtResource("2_e5cb8")
+region = Rect2(150, 0, 150, 220)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q7i6t"]
+atlas = ExtResource("2_e5cb8")
+region = Rect2(300, 0, 150, 220)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vd7b6"]
+atlas = ExtResource("2_e5cb8")
+region = Rect2(450, 0, 150, 220)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ga8gw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cj286")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jtf23")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xl3dw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m6bvd")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_trwbm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2auge")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q7i6t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vd7b6")
+}],
+"loop": true,
+"name": &"Run",
+"speed": 7.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hii30"]
+radius = 46.3
+height = 190.27
+
+[node name="Player_stage_1" type="CharacterBody2D" groups=["box", "player"]]
+script = ExtResource("1_y3rpc")
+move_speed = 300.0
+jump_height = 150.0
+jump_time_to_peak = 0.4
+jump_time_to_descent = 0.3
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_kanqy")
+}
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_ga8gw")
+animation = &"Run"
+autoplay = "Idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 12)
+shape = SubResource("CapsuleShape2D_hii30")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-3, -56)
+zoom = Vector2(2, 2)
+position_smoothing_enabled = true
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+texture = ExtResource("3_o64r2")
+texture_scale = 1.3
+
+[node name="ObjectSocket" type="Marker2D" parent="."]
+position = Vector2(63, -62)
