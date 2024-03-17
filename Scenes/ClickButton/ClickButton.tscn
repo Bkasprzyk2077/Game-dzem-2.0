@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://ma0pmmb7dsdj"]
+[gd_scene load_steps=7 format=3 uid="uid://ma0pmmb7dsdj"]
 
 [ext_resource type="Script" path="res://Scenes/ClickButton/ClickButton.gd" id="1_0okml"]
 [ext_resource type="Texture2D" uid="uid://ccv0i57ng5ya" path="res://Images/Stuff/Guzik (1).png" id="2_3ca32"]
 [ext_resource type="Texture2D" uid="uid://cre2blr7ttac0" path="res://Images/luna.png" id="3_xcqg1"]
 [ext_resource type="Texture2D" uid="uid://bty05q12pf5m" path="res://Images/Ui/ui-przycisk1.png" id="4_pepok"]
+[ext_resource type="AudioStream" uid="uid://lieqjjriy3e8" path="res://Audio/analog-appliance-button-15-186961.mp3" id="5_vr077"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j2vse"]
 size = Vector2(178, 150)
@@ -47,3 +48,6 @@ theme_override_font_sizes/font_size = 48
 text = "E"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_vr077")

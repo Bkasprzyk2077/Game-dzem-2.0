@@ -21,12 +21,11 @@ position = Vector2(3.5, -22.5)
 shape = SubResource("RectangleShape2D_nok32")
 
 [node name="TextureRect" type="TextureRect" parent="."]
-visible = false
 texture_filter = 1
-offset_left = -40.0
-offset_top = -74.0
-offset_right = 40.0
-offset_bottom = 6.0
+offset_left = -41.0
+offset_top = -170.0
+offset_right = 39.0
+offset_bottom = -90.0
 scale = Vector2(0.4, 0.4)
 pivot_offset = Vector2(40, 40)
 texture = ExtResource("3_uplrw")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://dei7ubuibj30r"]
+[gd_scene load_steps=26 format=3 uid="uid://dei7ubuibj30r"]
 
 [ext_resource type="PackedScene" uid="uid://c1iy20rnn1nvs" path="res://main.tscn" id="1_8sn0b"]
 [ext_resource type="Texture2D" uid="uid://btmw1w327bs1x" path="res://Images/Bg3/IMG_7494.png" id="2_anwii"]
@@ -21,6 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://cbtnln7e4ooxg" path="res://Scenes/ChangeCharacter/ChangeCharacter.tscn" id="18_247ic"]
 [ext_resource type="PackedScene" uid="uid://dqura5bk3ep88" path="res://Scenes/Player/player_stage_3.tscn" id="19_kf8mo"]
 [ext_resource type="PackedScene" uid="uid://dlgpm0nojk8q0" path="res://Scenes/Player/player_stage_4.tscn" id="20_467yg"]
+[ext_resource type="Texture2D" uid="uid://doldjeopwexdk" path="res://Images/Stuff2/assety poziom3.4.png" id="22_6i6sc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xgjyk"]
 texture = ExtResource("4_51wkw")
@@ -344,7 +345,12 @@ position = Vector2(2364, 228)
 new_character = ExtResource("20_467yg")
 
 [node name="Player_stage_3" parent="." index="33" instance=ExtResource("19_kf8mo")]
-position = Vector2(5374, 43)
+position = Vector2(-57, 26)
+
+[node name="AssetyPoziom3_4" type="Sprite2D" parent="." index="34"]
+position = Vector2(3897, -399)
+scale = Vector2(0.645353, 0.572285)
+texture = ExtResource("22_6i6sc")
 
 [editable path="Elevator"]
 [editable path="Elevator2"]
