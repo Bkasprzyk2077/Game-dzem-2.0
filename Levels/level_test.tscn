@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://dlbf7o41tucyn"]
+[gd_scene load_steps=16 format=3 uid="uid://dlbf7o41tucyn"]
 
 [ext_resource type="PackedScene" uid="uid://c1iy20rnn1nvs" path="res://main.tscn" id="1_oh5gk"]
 [ext_resource type="PackedScene" uid="uid://cecb21a5reyn4" path="res://Scenes/LevelExit/LevelExit.tscn" id="2_kmyk6"]
@@ -12,11 +12,13 @@
 [ext_resource type="PackedScene" uid="uid://cm867fbdng67m" path="res://Scenes/Box/Box.tscn" id="7_bt3pl"]
 [ext_resource type="PackedScene" uid="uid://qnp6c5yg5i12" path="res://Scenes/Note/Note.tscn" id="7_jsorv"]
 [ext_resource type="PackedScene" uid="uid://cl41igdtn74v2" path="res://Scenes/Player/player_stage_1.tscn" id="9_k6vy8"]
+[ext_resource type="PackedScene" uid="uid://b5ev03ia8rtcs" path="res://Scenes/Wheel/Wheel.tscn" id="13_kltt4"]
+[ext_resource type="Texture2D" uid="uid://d3klrdevu7icr" path="res://Images/Stuff/blacha.png" id="14_afunh"]
+[ext_resource type="Texture2D" uid="uid://bwi2t7kye77cu" path="res://Images/Stuff/Rury.png" id="15_d22lo"]
 
 [node name="level_test" instance=ExtResource("1_oh5gk")]
 
 [node name="CanvasModulate" parent="." index="0"]
-visible = false
 color = Color(0, 0, 0, 1)
 
 [node name="Background" parent="." index="1"]
@@ -75,6 +77,21 @@ position = Vector2(62, 77)
 position = Vector2(145, 79)
 
 [node name="Player_stage_1" parent="." index="11" instance=ExtResource("9_k6vy8")]
+position = Vector2(31, -54)
+
+[node name="Wheel" parent="." index="12" instance=ExtResource("13_kltt4")]
+
+[node name="Sprite2D" type="Sprite2D" parent="Items" index="0"]
+position = Vector2(-308, 197)
+rotation = -0.487919
+scale = Vector2(0.502645, 0.702268)
+texture = ExtResource("14_afunh")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Items" index="1"]
+position = Vector2(152, 197)
+rotation = 0.116402
+scale = Vector2(0.599962, 0.48481)
+texture = ExtResource("15_d22lo")
 
 [editable path="Doors"]
 [editable path="Elevator"]

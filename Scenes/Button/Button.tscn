@@ -1,16 +1,17 @@
-[gd_scene load_steps=10 format=3 uid="uid://hbdun73us2t7"]
+[gd_scene load_steps=11 format=3 uid="uid://hbdun73us2t7"]
 
-[ext_resource type="Texture2D" uid="uid://ceylmf7myh7jl" path="res://Images/icon.svg" id="1_ujgf6"]
 [ext_resource type="Script" path="res://Scenes/Button/Button.gd" id="1_we0lp"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_fl1c3"]
-size = Vector2(129, 116.364)
+[ext_resource type="Texture2D" uid="uid://bvflaaky44k4x" path="res://Images/Stuff/2.png" id="2_omsa2"]
+[ext_resource type="Texture2D" uid="uid://eqs7sqtp3n5h" path="res://Images/Stuff/1.png" id="3_6iqca"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_acs32"]
-size = Vector2(110, 19)
+size = Vector2(157, 18.01)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_limte"]
-size = Vector2(110, 19)
+size = Vector2(196, 19)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fl1c3"]
+size = Vector2(211, 262.051)
 
 [sub_resource type="Animation" id="Animation_ib12v"]
 length = 0.001
@@ -55,35 +56,35 @@ _data = {
 [node name="Button" type="Node2D"]
 script = ExtResource("1_we0lp")
 
-[node name="AreaBase" type="AnimatableBody2D" parent="."]
-
-[node name="Base" type="Sprite2D" parent="AreaBase"]
-position = Vector2(0, 5)
-scale = Vector2(1, 0.171875)
-texture = ExtResource("1_ujgf6")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaBase"]
-position = Vector2(0.5, 4.96)
-scale = Vector2(1, 0.171875)
-shape = SubResource("RectangleShape2D_fl1c3")
-
 [node name="AreaTop" type="AnimatableBody2D" parent="."]
 
 [node name="Top" type="Sprite2D" parent="AreaTop"]
-position = Vector2(3.8147e-06, -2.5)
-scale = Vector2(0.859375, 0.164062)
-texture = ExtResource("1_ujgf6")
+position = Vector2(52, 65)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("3_6iqca")
 
 [node name="AreaTopDetect" type="Area2D" parent="AreaTop"]
 position = Vector2(2.08165e-12, 6)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreaTop/AreaTopDetect"]
-position = Vector2(2.08165e-12, -20.49)
+position = Vector2(-2, -38)
 shape = SubResource("RectangleShape2D_acs32")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreaTop"]
-position = Vector2(0, -2.5)
+position = Vector2(-4, -13)
 shape = SubResource("RectangleShape2D_limte")
+
+[node name="AreaBase" type="AnimatableBody2D" parent="."]
+
+[node name="Base" type="Sprite2D" parent="AreaBase"]
+position = Vector2(52, 53)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_omsa2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaBase"]
+position = Vector2(-3.5, 17.48)
+scale = Vector2(1, 0.171875)
+shape = SubResource("RectangleShape2D_fl1c3")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

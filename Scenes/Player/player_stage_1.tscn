@@ -134,6 +134,7 @@ position_smoothing_enabled = true
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
 texture = ExtResource("3_1ka6f")
+texture_scale = 1.5
 
 [node name="ObjectSocket" type="Marker2D" parent="."]
-position = Vector2(-1, -37)
+position = Vector2(63, -62)
