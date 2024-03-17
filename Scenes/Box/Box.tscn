@@ -8,7 +8,7 @@
 size = Vector2(44, 46)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ilwtd"]
-radius = 55.56
+radius = 78.42
 
 [node name="Box" type="RigidBody2D" groups=["box"]]
 mass = 0.3

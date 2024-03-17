@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Game-dzem-2.0"
-run/main_scene="res://Levels/level_test.tscn"
+run/main_scene="res://Levels/MainMenu.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 boot_splash/image="res://Images/background.png"
 config/icon="res://Images/icon.svg"
@@ -20,6 +20,7 @@ config/icon="res://Images/icon.svg"
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
+window/size/mode=3
 window/size/window_width_override=1920
 window/stretch/mode="viewport"
 window/stretch/aspect="expand"
