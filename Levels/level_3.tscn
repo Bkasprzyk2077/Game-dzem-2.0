@@ -312,37 +312,42 @@ position = Vector2(3141, -316)
 
 [node name="Note" parent="." index="24" instance=ExtResource("12_mf3il")]
 position = Vector2(1942, -251)
+note_text = "W pewnym momencie wszystko co ludzie stworzyli zaczęło ulegać zniszczeniu. Zaczęła też cierpieć natura. Ci którzy rządzili nad ludźmi zorientowali się jak daleko zaszła ich zachłanność. Nie chcąc jednak przyznać się do swojej winy zaczęli obwiniać tych co pracowali pod nimi. Ci, żyjąc w strachu przed zniszczeniem,  zaczęli walczyć o wszystkie te przedmioty które się nie rozpadły. Rozkładając je na części byle tylko móc nimi wykupić swoje życie. Gdzie jednak miejsce na takiego robota jak ja w tym świecie…"
 
-[node name="LevelExit" parent="." index="25" instance=ExtResource("13_8twva")]
+[node name="Note2" parent="." index="25" instance=ExtResource("12_mf3il")]
+position = Vector2(5298, 406)
+note_text = "Oh... Juz pamiętam... Nie byłom w stanie im pomóc...zaczęłom się rozpadać i przestawałom ciągle działać. Rozebrali mnie więc poszukując części, ale nie miałom w sobie żadnych, które bylyby czegokolwiek warte.. Nie mieli już siły mnie naprawić i porzucili mnie tutaj...i nie myślę że ich winię.. A mimo to, mimo to że już nie dało się nic uratować - poskładałom się, chciałom żyć... I myślę, że to wystarczy. Może skoro już mam możliwość tworzyć dla piękna zacznę i poskładam innych. Tak... Myślę że to wystarczy"
+
+[node name="LevelExit" parent="." index="26" instance=ExtResource("13_8twva")]
 position = Vector2(5570, 387)
 next_level = "res://Levels/EndMenu.tscn"
 
-[node name="Trash" parent="." index="26" instance=ExtResource("14_k5asp")]
+[node name="Trash" parent="." index="27" instance=ExtResource("14_k5asp")]
 position = Vector2(430, 108)
 
-[node name="Img7510" type="Sprite2D" parent="." index="27"]
+[node name="Img7510" type="Sprite2D" parent="." index="28"]
 position = Vector2(-229, 201)
 texture = ExtResource("14_y7qye")
 
-[node name="Img7513" type="Sprite2D" parent="." index="28"]
+[node name="Img7513" type="Sprite2D" parent="." index="29"]
 position = Vector2(3303, -125)
 rotation = -3.14102
 texture = ExtResource("15_4abmm")
 
-[node name="Img7515" type="Sprite2D" parent="." index="29"]
+[node name="Img7515" type="Sprite2D" parent="." index="30"]
 position = Vector2(3209, 434)
 texture = ExtResource("16_sg6r1")
 
-[node name="Img7517" type="Sprite2D" parent="." index="30"]
+[node name="Img7517" type="Sprite2D" parent="." index="31"]
 position = Vector2(3970, -347)
 texture = ExtResource("17_22p2u")
 
-[node name="ChangeCharacter" parent="." index="31" instance=ExtResource("18_247ic")]
+[node name="ChangeCharacter" parent="." index="32" instance=ExtResource("18_247ic")]
 position = Vector2(2364, 228)
 new_character = ExtResource("20_467yg")
 
-[node name="Player_stage_3" parent="." index="32" instance=ExtResource("19_kf8mo")]
-position = Vector2(-111, 88)
+[node name="Player_stage_3" parent="." index="33" instance=ExtResource("19_kf8mo")]
+position = Vector2(-80, 81)
 
 [editable path="Elevator"]
 [editable path="Elevator2"]

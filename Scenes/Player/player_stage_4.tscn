@@ -135,7 +135,7 @@ animations = [{
 radius = 46.3
 height = 190.27
 
-[node name="Player_stage_3" type="CharacterBody2D" groups=["box", "player"]]
+[node name="Player_stage_4" type="CharacterBody2D" groups=["box", "player"]]
 script = ExtResource("1_u3fbm")
 move_speed = 300.0
 jump_height = 150.0
@@ -166,4 +166,4 @@ texture = ExtResource("4_nuvvx")
 texture_scale = 5.0
 
 [node name="ObjectSocket" type="Marker2D" parent="."]
-position = Vector2(63, -62)
+position = Vector2(88, -102)
