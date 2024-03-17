@@ -23,6 +23,7 @@ texture = ExtResource("1_jfrt3")
 shape = SubResource("RectangleShape2D_eucif")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
 custom_minimum_size = Vector2(500, 500)

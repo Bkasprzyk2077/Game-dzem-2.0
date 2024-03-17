@@ -35,4 +35,4 @@ texture = ExtResource("3_7jabl")
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_yicmw")
 autoplay = true
-attenuation = 11.3137
+attenuation = 5.27803
