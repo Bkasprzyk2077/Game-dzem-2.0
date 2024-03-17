@@ -17,5 +17,5 @@ func change_character():
 	var player_pos = player.global_position
 	get_parent().add_child(new_character_instance)
 	player.queue_free()
-	new_character_instance.global_position = player_pos
+	new_character_instance.global_position = player_pos + Vector2(0, -200)
 	
