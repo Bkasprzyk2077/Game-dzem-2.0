@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://h78i2qcpm5qq"]
+[gd_scene load_steps=27 format=3 uid="uid://h78i2qcpm5qq"]
 
 [ext_resource type="PackedScene" uid="uid://c1iy20rnn1nvs" path="res://main.tscn" id="1_px6ay"]
 [ext_resource type="Texture2D" uid="uid://dtqu4oohj1nb3" path="res://Images/Bg2/IMG_7483.png" id="2_0bgeo"]
@@ -21,6 +21,8 @@
 [ext_resource type="PackedScene" uid="uid://cecb21a5reyn4" path="res://Scenes/LevelExit/LevelExit.tscn" id="17_j5ahj"]
 [ext_resource type="PackedScene" uid="uid://qnp6c5yg5i12" path="res://Scenes/Note/Note.tscn" id="20_u8tl6"]
 [ext_resource type="PackedScene" uid="uid://ccdix711b2a4s" path="res://Scenes/LightBuble/LightBuble.tscn" id="21_guwue"]
+[ext_resource type="Texture2D" uid="uid://cb7qbxetn1ijd" path="res://Images/Stuff2/IMG_7518.png" id="22_fy0kb"]
+[ext_resource type="Texture2D" uid="uid://cqp1jqwda8x32" path="res://Images/Stuff2/IMG_7516.png" id="23_vb655"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xgjyk"]
 texture = ExtResource("2_lmou2")
@@ -222,10 +224,13 @@ visible = false
 position = Vector2(1843, 215)
 
 [node name="Trash2" parent="Items" index="1" instance=ExtResource("13_kqijd")]
-position = Vector2(2221, 263)
+position = Vector2(2231, 320)
+rotation = -0.00624416
+scale = Vector2(1.17195, 0.547329)
 
 [node name="Trash3" parent="Items" index="2" instance=ExtResource("13_kqijd")]
 position = Vector2(2629, 209)
+rotation = -0.246532
 
 [node name="Img7509" type="Sprite2D" parent="Items" index="3"]
 position = Vector2(458, -312)
@@ -278,7 +283,7 @@ position = Vector2(123, -284.2)
 new_character = ExtResource("4_js1c6")
 
 [node name="ChangeCharacter2" parent="." index="14" instance=ExtResource("11_5xn0p")]
-position = Vector2(3062, -263)
+position = Vector2(3065, -225)
 new_character = ExtResource("12_xqp2y")
 
 [node name="Player_stage_1" parent="." index="15" instance=ExtResource("7_0aohg")]
@@ -287,7 +292,7 @@ position = Vector2(-809, -585)
 [node name="Wheel" parent="." index="16" instance=ExtResource("13_ib5q5")]
 position = Vector2(1651, 989)
 
-[node name="AnimatableBody2D" parent="Wheel" index="1"]
+[node name="AnimatableBody2D" parent="Wheel" index="0"]
 position = Vector2(220, 2.08165e-12)
 
 [node name="Wheel2" parent="." index="17" instance=ExtResource("13_ib5q5")]
@@ -296,7 +301,7 @@ position = Vector2(2010, 826)
 [node name="Wheel3" parent="." index="18" instance=ExtResource("13_ib5q5")]
 position = Vector2(2293, 980)
 
-[node name="AnimatableBody2D" parent="Wheel3" index="1"]
+[node name="AnimatableBody2D" parent="Wheel3" index="0"]
 position = Vector2(220, 2.08165e-12)
 
 [node name="Wheel4" parent="." index="19" instance=ExtResource("13_ib5q5")]
@@ -305,7 +310,7 @@ position = Vector2(2598, 829)
 [node name="Wheel5" parent="." index="20" instance=ExtResource("13_ib5q5")]
 position = Vector2(2862, 987)
 
-[node name="AnimatableBody2D" parent="Wheel5" index="1"]
+[node name="AnimatableBody2D" parent="Wheel5" index="0"]
 position = Vector2(220, 2.08165e-12)
 
 [node name="LevelExit" parent="." index="21" instance=ExtResource("17_j5ahj")]
@@ -323,22 +328,34 @@ position = Vector2(533, -670)
 rotation = 0.502875
 
 [node name="LightBuble3" parent="." index="25" instance=ExtResource("21_guwue")]
-position = Vector2(2829, -248)
+position = Vector2(3058, -621)
+rotation = 3.1286
 
 [node name="LightBuble4" parent="." index="26" instance=ExtResource("21_guwue")]
-position = Vector2(1454, -182)
+position = Vector2(1431, -145)
+rotation = 0.487004
 
 [node name="LightBuble5" parent="." index="27" instance=ExtResource("21_guwue")]
 position = Vector2(3839, -419)
+rotation = -2.20407
 
 [node name="LightBuble6" parent="." index="28" instance=ExtResource("21_guwue")]
-position = Vector2(3093, 851)
+position = Vector2(3066, 867)
+rotation = -0.439927
 
 [node name="LightBuble7" parent="." index="29" instance=ExtResource("21_guwue")]
 position = Vector2(1274, 800)
 
 [node name="LightBuble8" parent="." index="30" instance=ExtResource("21_guwue")]
-position = Vector2(17, 441)
+position = Vector2(37, 491)
+
+[node name="Img7518" type="Sprite2D" parent="." index="31"]
+position = Vector2(3269, 835)
+texture = ExtResource("22_fy0kb")
+
+[node name="Img7516" type="Sprite2D" parent="." index="32"]
+position = Vector2(901, 566)
+texture = ExtResource("23_vb655")
 
 [editable path="Elevator"]
 [editable path="Elevator2"]
