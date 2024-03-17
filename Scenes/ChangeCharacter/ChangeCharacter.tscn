@@ -1,22 +1,24 @@
 [gd_scene load_steps=5 format=3 uid="uid://cbtnln7e4ooxg"]
 
-[ext_resource type="Texture2D" uid="uid://ceylmf7myh7jl" path="res://Images/icon.svg" id="1_5x3bd"]
 [ext_resource type="Script" path="res://Scenes/ChangeCharacter/ChangeCharacter.gd" id="1_kdque"]
+[ext_resource type="Texture2D" uid="uid://dfumifeevu4hb" path="res://Images/Stuff2/skrzynka uwu.png" id="2_bwpls"]
 [ext_resource type="Texture2D" uid="uid://bty05q12pf5m" path="res://Images/Ui/ui-przycisk1.png" id="3_uplrw"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_lt1m4"]
-radius = 76.69
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nok32"]
+size = Vector2(229, 117)
 
 [node name="ChangeCharacter" type="Node2D"]
 script = ExtResource("1_kdque")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_5x3bd")
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("2_bwpls")
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource("CircleShape2D_lt1m4")
+position = Vector2(3.5, -22.5)
+shape = SubResource("RectangleShape2D_nok32")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 visible = false

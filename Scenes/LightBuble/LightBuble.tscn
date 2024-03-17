@@ -1,13 +1,14 @@
 [gd_scene load_steps=3 format=3 uid="uid://ccdix711b2a4s"]
 
 [ext_resource type="Texture2D" uid="uid://p7pchcpdp8f5" path="res://Images/Stuff/zarowka.png" id="1_785nb"]
-[ext_resource type="Texture2D" uid="uid://cre2blr7ttac0" path="res://Images/luna.png" id="2_t2vw7"]
+[ext_resource type="Texture2D" uid="uid://csiwisyiecgk6" path="res://Images/light.png" id="2_0538s"]
 
 [node name="LightBuble" type="Sprite2D"]
+scale = Vector2(0.7, 0.7)
 texture = ExtResource("1_785nb")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
 color = Color(1, 0.333333, 0.282353, 1)
 energy = 2.0
-texture = ExtResource("2_t2vw7")
+texture = ExtResource("2_0538s")
 texture_scale = 3.0
