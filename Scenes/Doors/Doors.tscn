@@ -1,25 +1,25 @@
 [gd_scene load_steps=4 format=3 uid="uid://d02divua3fcjo"]
 
-[ext_resource type="Texture2D" uid="uid://ceylmf7myh7jl" path="res://Images/icon.svg" id="1_e7rg5"]
 [ext_resource type="Script" path="res://Scenes/Doors/Doors.gd" id="1_euni4"]
+[ext_resource type="Texture2D" uid="uid://x80tgkorhu0e" path="res://Images/Stuff/drzwi (1).png" id="2_vgh56"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uoggs"]
-size = Vector2(20, 128)
+size = Vector2(66, 292)
 
 [node name="Doors" type="Node2D"]
 script = ExtResource("1_euni4")
 
 [node name="Area2D" type="StaticBody2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource("RectangleShape2D_uoggs")
-
-[node name="Sprite2D" type="Sprite2D" parent="Area2D/CollisionShape2D"]
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
 position = Vector2(7.15256e-07, 0)
-scale = Vector2(0.15625, 1)
-texture = ExtResource("1_e7rg5")
+texture = ExtResource("2_vgh56")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-2, -1)
+shape = SubResource("RectangleShape2D_uoggs")
 
 [node name="Start" type="Marker2D" parent="."]
 
 [node name="End" type="Marker2D" parent="."]
-position = Vector2(2.08165e-12, 150)
+position = Vector2(1, 345)
